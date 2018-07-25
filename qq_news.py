@@ -1,5 +1,6 @@
 #!/bin/bash/python
 #coding=utf-8
+
 # 导入模块
 import prettytable as pt
 import requests
