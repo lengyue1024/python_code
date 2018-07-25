@@ -1,0 +1,2 @@
+# python_small_program
+记录了自己所写的一些小型python程序代码
