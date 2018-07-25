@@ -11,12 +11,13 @@ data = requests.get(url).text
 soup = BeautifulSoup(data,'lxml')
 # 从解析文件中通过select选择器定位到指定的元素，并返回一个列表
 news_titles = soup.select("div.text > em.f14 > a.linkto")
-# 对返回的列表进行遍历
+# 设置表格标题栏
 tb = pt.PrettyTable(["标题","链接"])
+# 对返回的列表进行遍历
 for n in news_titles:
 	# 提取出标题和链接信息
 	title = n.get_text()
 	link = n.get("href")
 	tb.add_row([title,link])
+# 以表格形式打印
 print(tb)
-
